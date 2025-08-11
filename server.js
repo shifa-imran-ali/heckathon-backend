@@ -11,7 +11,10 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://heckathon-frontend-tan.vercel.app/",
+  origin: [
+    "https://heckathon-frontend-tan.vercel.app", // deployed frontend
+    "http://localhost:5173" // local dev frontend
+  ],
   credentials: true
 }));
 
